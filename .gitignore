@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+
+# Model weights
+weights/*.pth
+
+# Outputs
+*.png
+*.jpg
+*.jpeg
+
+# OS / editor
+.DS_Store
+.vscode/
+
