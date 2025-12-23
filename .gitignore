@@ -17,3 +17,5 @@ weights/*.pth
 .DS_Store
 .vscode/
 
+
+!input.jpg

@@ -11,8 +11,8 @@ def main():
 
     num=random.randint(1,10)
 
-    input_image = "input1.jpg"     # put your image here
-    output_image = f"output_{num}.png"
+    input_image = "input.jpg"     # put your image here
+    output_image = f"output_{num}.jpg"
 
     upscaler.upscale_and_save(
         input_image,
