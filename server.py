@@ -147,6 +147,20 @@ def download_image(filename: str):
         
     return FileResponse(file_path)
 
+@app.get("/uploads/{filename}")
+def get_uploaded_image(filename: str):
+    """
+    Serve an image from the uploads/ directory.
+    """
+    print(f"DEBUG: Serving upload {filename}")
+    file_path = os.path.join(UPLOAD_DIR, filename)
+    
+    if not os.path.exists(file_path):
+        print(f"ERROR: File not found at {file_path}")
+        raise HTTPException(status_code=404, detail="File not found")
+        
+    return FileResponse(file_path)
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="127.0.0.1", port=8000)
